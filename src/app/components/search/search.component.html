@@ -1,0 +1,86 @@
+<br />
+<br />
+<br />
+
+<form action="">
+  <input [formControl]="nam" type="search" (keyup.enter)="search(nam)" />
+  <i class="fa fa-search" (click)="search(nam)"></i>
+</form>
+
+<div class="container">
+  <div class="jumbotron text-center hoverable p-4">
+    <!-- Grid row -->
+    <div class="row">
+      <!-- Grid column -->
+      <div class="col-md-4 offset-md-1 mx-3 my-3">
+        <!-- Featured image -->
+        <div class="view overlay zoom" mdbWavesEffect>
+          <img
+            src="{{ results.Poster }}"
+            class="img-fluid"
+            alt="Sample image for first version of blog listing"
+          />
+          <a>
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-7 text-md-left ml-3 mt-3">
+        <!-- Excerpt -->
+        <a href="#!" class="green-text">
+          <h6 class="h6 pb-1">
+            <mdb-icon fas icon="desktop" class="pr-1"></mdb-icon> movies
+          </h6>
+        </a>
+        <h4 class="h4 mb-4">{{ results.Title }}</h4>
+        <!-- <ul>
+          <li>{{ results.Year }}</li>
+          <li>{{ results.Rated }}</li>
+          <li>{{ results.Released }}</li>
+          <li>{{ results.Plot }}</li> -->
+
+        <table mdbTable hover="true" >
+          <tbody>
+            <div class="hand hoverable px-3">
+            <tr mdbTableCol>
+              <th>RELEASE DATE</th>
+              <td>{{ results.Released }}</td>
+            </tr>
+          </div>
+          <div class="hand hoverable px-3">
+            <tr mdbTableCol>
+              <th>RATED</th>
+              <td>{{ results.Rated }}</td>
+            </tr>
+          </div>
+            <div class="hand hoverable px-3">
+            <tr mdbTableCol>
+              <th>LANGUAGE</th>
+              <td>{{ results.Genre }}</td>
+            </tr>
+            </div>
+            <div class="hand hoverable px-3">
+            <tr mdbTableCol>
+              <th>PLOT</th>
+              <td>{{ results.Plot }}</td>
+            </tr>
+            </div>
+            <div class="hand hoverable px-3">
+            <tr mdbTableCol>
+              <th>IMDB RATING</th>
+              <td>
+                <span style="position: absolute; bottom: 20%; right: 10%;"
+                  >{{ results.imdbRating }}
+                </span>
+              </td>
+            </tr>
+            </div>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

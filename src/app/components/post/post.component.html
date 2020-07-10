@@ -1,0 +1,27 @@
+<mdb-card [ngClass]="animate">
+        <mdb-card-body>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="https://mdbootstrap.com/img/Others/documentation/img%20(75)-mini.jpg" alt="thumbnail"
+                        class="img-thumbnail hoverable" style="width: 200px" />
+                </div>
+                <div class="col-md-10">
+                    <mdb-card-title>
+                        <h4>Panel title</h4>
+                    </mdb-card-title>
+                    <mdb-card-text>{{post.content}}</mdb-card-text>
+                    <div class="d-flex flex-row-reverse">
+                        <div class="p-2">
+                            <button mdbBtn type="button" size="sm" color="blue-grey" outline="true"
+                                (click)="view_post()" mdbWavesEffect>View</button>
+                        </div>
+                        <div style="padding: 16px 16px 0px;">
+                                <mdb-icon far icon="heart" class="hand" style="font-size: 25px;"></mdb-icon>
+                        </div>
+                        <div style="padding: 16px 10px 0px;">12 comments</div>
+
+                    </div>
+                </div>
+            </div>
+        </mdb-card-body>
+    </mdb-card>
