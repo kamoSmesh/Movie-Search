@@ -1,14 +1,18 @@
 <br />
 <br />
 <br />
-
-<form action="">
-  <input [formControl]="nam" type="search" (keyup.enter)="search(nam)" />
+ 
+<form action="meee">
+  <input [formControl]="nam" type="search" (keyup.enter)="search(nam)" placeholder="enter movie name" />
   <i class="fa fa-search" (click)="search(nam)"></i>
+  
 </form>
 
-<div class="container">
-  <div class="jumbotron text-center hoverable p-4">
+
+
+
+<div class="container " >
+  <div class="jumbotron text-center hoverable p-300 corner">
     <!-- Grid row -->
     <div class="row">
       <!-- Grid column -->
@@ -36,11 +40,7 @@
           </h6>
         </a>
         <h4 class="h4 mb-4">{{ results.Title }}</h4>
-        <!-- <ul>
-          <li>{{ results.Year }}</li>
-          <li>{{ results.Rated }}</li>
-          <li>{{ results.Released }}</li>
-          <li>{{ results.Plot }}</li> -->
+      
 
         <table mdbTable hover="true" >
           <tbody>
@@ -58,7 +58,7 @@
           </div>
             <div class="hand hoverable px-3">
             <tr mdbTableCol>
-              <th>LANGUAGE</th>
+              <th>Genre</th>
               <td>{{ results.Genre }}</td>
             </tr>
             </div>
@@ -72,7 +72,7 @@
             <tr mdbTableCol>
               <th>IMDB RATING</th>
               <td>
-                <span style="position: absolute; bottom: 20%; right: 10%;"
+                <span style="position: absolute; bottom: 17%; right: 10%;"
                   >{{ results.imdbRating }}
                 </span>
               </td>
@@ -84,3 +84,4 @@
     </div>
   </div>
 </div>
+ 

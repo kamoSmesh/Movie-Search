@@ -20,4 +20,9 @@ export class ServerService {
     let API_URL2: string = "http://www.omdbapi.com/?t=" +name+ "&apikey=f2c04e22";
     return this.http.get(API_URL2);
   }
+
 }
+
+
+
+
